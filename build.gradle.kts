@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.uramnoil.nukkit"
-version = "1.0-SNAPSHOT"
+version = "1.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib", "1.3.11"))
-    implementation("cn.nukkit:nukkit:1.0-SNAPSHOT")
+    compileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1")
 }
 
