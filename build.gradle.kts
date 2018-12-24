@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.Coroutines
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
-    kotlin("jvm") version "1.3.10"
+    kotlin("jvm") version "1.3.11"
     id("com.github.johnrengelman.shadow") version "4.0.3"
 }
 
@@ -20,7 +20,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib", "1.3.11"))
     compileOnly("cn.nukkit:nukkit:1.0-SNAPSHOT")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0")
 }
 
 defaultTasks = listOf("shadowJar")
