@@ -1,0 +1,9 @@
+.idea
+
+.gradle
+!.idea/gradle.xml
+!.idea/misc.xml
+
+out
+build
+bin

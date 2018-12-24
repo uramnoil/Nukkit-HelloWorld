@@ -1,0 +1,5 @@
+name: HelloWorld
+main: com.uramnoil.nukkit.helloworld.HelloWorld
+api: 1.0.7
+version: 1.0
+author: UramnOIL
