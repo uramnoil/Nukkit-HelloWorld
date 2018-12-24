@@ -1,9 +1,9 @@
-.idea
+## Directory-based project format:
+.idea/
 
-.gradle
-!.idea/gradle.xml
-!.idea/misc.xml
+## Gradle
+.gradle/
+build/
 
-out
-build
-bin
+# IntelliJ
+out/
