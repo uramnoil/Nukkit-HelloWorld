@@ -5,9 +5,9 @@ import cn.nukkit.event.Listener
 import cn.nukkit.event.player.PlayerJoinEvent
 import com.uramnoil.nukkit.helloworld.IHelloWorld
 
-class MyHandler(private val plugin: IHelloWorld) : Listener {
+class MyHandler(private val presentator: IHelloWorld) : Listener {
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
-        plugin.sendMessage(event.player, 10, "Hello, World")
+        presentator.sendMessage(event.player, 10, "Hello, World")
     }
 }
