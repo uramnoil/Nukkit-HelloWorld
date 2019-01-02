@@ -11,10 +11,12 @@ class HelloWorld : PluginBase() {
         server.pluginManager.registerEvents(handler, this)
     }
 
-    fun sendMessage(player: Player, message: String = "Hello, World") = GlobalScope.launch {
-        for(i in 1..10) {
-            delay(1000L)
-            player.sendMessage(message)
+    fun sendMessage(player: Player, times: Int = 0, message: String = "Hello, World") {
+        val job = GlobalScope.launch {
+            repeat(times) {
+                delay(1000L)
+                player.sendMessage(message)
+            }
         }
     }
 }

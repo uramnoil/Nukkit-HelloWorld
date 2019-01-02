@@ -8,6 +8,6 @@ import com.uramnoil.nukkit.helloworld.HelloWorld
 class MyHandler(private val plugin: HelloWorld) : Listener {
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
-        plugin.sendMessage(event.player)
+        plugin.sendMessage(event.player, 10, "Hello, World")
     }
 }
