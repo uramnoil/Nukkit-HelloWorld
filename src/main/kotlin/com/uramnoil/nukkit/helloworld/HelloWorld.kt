@@ -12,7 +12,7 @@ class HelloWorld : PluginBase() {
     }
 
     fun sendMessage(player: Player, times: Int = 0, message: String = "Hello, World") {
-        val job = GlobalScope.launch {
+        GlobalScope.launch {
             repeat(times) {
                 delay(1000L)
                 player.sendMessage(message)
