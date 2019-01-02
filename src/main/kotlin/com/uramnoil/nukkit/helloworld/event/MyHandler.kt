@@ -3,11 +3,11 @@ package com.uramnoil.nukkit.helloworld.event
 import cn.nukkit.event.EventHandler
 import cn.nukkit.event.Listener
 import cn.nukkit.event.player.PlayerJoinEvent
-import com.uramnoil.nukkit.helloworld.IHelloWorld
+import com.uramnoil.nukkit.helloworld.IHelloWorldController
 
-class MyHandler(private val presentator: IHelloWorld) : Listener {
+class MyHandler(private val controller: IHelloWorldController) : Listener {
     @EventHandler
     fun onJoin(event: PlayerJoinEvent) {
-        presentator.sendMessage(event.player, 10, "Hello, World")
+        controller.sendMessage(event.player, 10, "Hello, World")
     }
 }
