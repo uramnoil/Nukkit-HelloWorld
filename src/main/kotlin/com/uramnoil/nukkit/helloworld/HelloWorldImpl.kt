@@ -5,7 +5,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class HelloWorldController : IHelloWorldController {
+class HelloWorldImpl : IHelloWorld {
     override fun sendMessage(player: Player, times: Int, message: String) {
         GlobalScope.launch {
             repeat(times) {
