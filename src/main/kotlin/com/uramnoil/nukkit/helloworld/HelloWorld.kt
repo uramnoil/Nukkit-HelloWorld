@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 
 class HelloWorld : PluginBase(), Listener {
     lateinit var message: String
+
     override fun onEnable() {
         server.pluginManager.registerEvents(this, this)
         message = "Hello, World"
@@ -19,15 +20,15 @@ class HelloWorld : PluginBase(), Listener {
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
-        sendMessage(player, 10) {
+        player.sendMessageRepeating(10, 1000L) {
             message
         }
     }
 
-    fun sendMessage(player: Player, times: Int, proc: () -> String ) = GlobalScope.launch {
+    fun Player.sendMessageRepeating(times: Int, delay: Long, proc: () -> String ) = GlobalScope.launch {
         repeat(times) {
-            delay(1000L)
-            player.sendMessage(proc())
+            delay(delay)
+            sendMessage(proc())
         }
     }
 }
